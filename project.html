@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>I ❤ Philosophy</title>
+    <style>
+      body {
+        background: linear-gradient(to top, #e6b980 0%, #eacda3 100%);
+      }
+      h1 {
+        color: #1d1716;
+        font-size: 48px;
+        text-decoration-line: underline;
+        font-weight: 900;
+        text-align: center;
+        font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+          "Lucida Sans", Arial, sans-serif;
+        line-height: 150%;
+      }
+      h2 {
+        color: #1d1716;
+        font-weight: normal;
+        text-align: center;
+        font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+          "Lucida Sans", Arial, sans-serif;
+      }
+      hr {
+        border-top: 1.5px solid #1d1716;
+      }
+      img {
+        display: block;
+        margin: 0 auto;
+      }
+      p {
+        color: #402a23;
+        font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+          "Lucida Sans", Arial, sans-serif;
+      }
+      a {
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+      button {
+        display: block;
+        margin: 30px auto;
+        padding: 15px 20px;
+        color: #a55233;
+        border: #a55233 2px solid;
+        border-radius: 25px 25px;
+        box-shadow: 3px 3px 5px #aa783b;
+        background: #f3bc77;
+        transition: all 150ms ease-in-out;
+        font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+          "Lucida Sans", Arial, sans-serif;
+      }
+      button:hover {
+        color: #f3bc77;
+        background-color: #a55233;
+        cursor: crosshair;
+      }
+      .body {
+        line-height: 150%;
+      }
+      .container {
+        max-width: 600px;
+        margin: 0 auto;
+      }
+      .learn {
+        color: #1d1716;
+        font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+          "Lucida Sans", Arial, sans-serif;
+      }
+      .contact {
+        font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+          "Lucida Sans", Arial, sans-serif;
+        color: #402a23;
+        display: block;
+        margin: 0 auto;
+        line-height: 150%;
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="body">
+        <h1>
+          Philosophy <br />
+          "φιλοσοφία"
+        </h1>
+        <h2>for the love of knowledge and wisdom</h2>
+        <hr />
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/065/492/original/Slide1.JPG?1675350980"
+          width="300"
+        />
+        <hr />
+        <p>
+          Quite literally, the term <strong>"philosophy"</strong> means,
+          <em>"love of wisdom."</em> In a broad sense, philosophy is an activity
+          people undertake when they seek to understand fundamental truths about
+          themselves, the world in which they live, and their relationships to
+          the world and to each other. As an academic discipline philosophy is
+          much the same. Those who study philosophy are perpetually engaged in
+          asking answering, and arguing for their answers to life's most basic
+          questions.
+        </p>
+        <a
+          class="learn"
+          href="https://philosophy.fsu.edu/undergraduate-study/why-philosophy/What-is-Philosophy"
+          target="_blank"
+          >Learn more here
+        </a>
+        <br />
+        <button>👉🏾Philosophise here!</button>
+      </div>
+      <hr />
+      <div>
+        <span class="contact">Email:</span> welcome@philososo.com
+        <span class="contact">Instagram:</span> @philososo
+      </div>
+    </div>
+    <script>
+      let age = prompt("How old are you?");
+      if (age < 18) {
+        alert("Sorry, you can't enter.");
+      } else {
+        alert("You're good. Enjoy the site!");
+      }
+
+      function gatherInfo() {
+        let name = prompt("What is your name?");
+        let mail = prompt("What is your email address");
+
+        let h1 = document.querySelector("h1");
+        if (name.length > 0 && mail.length > 0) {
+          h1.innerHTML =
+            "Thank you, " + name + "! We'll be sure to contact you!";
+        } else {
+          h1.innerHTML = "Come on. Don't you want to learn together? 😢";
+        }
+      }
+      let button = document.querySelector("button");
+      button.addEventListener("click", gatherInfo);
+    </script>
+  </body>
+</html>
